@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- Tells browser this is HTML5 -->
+<html lang="en"> <!-- Starts HTML document in English -->
+<head> <!-- Opens head section for metadata -->
+   <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobile devices -->
+   <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to Google Fonts for faster loading -->
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts CDN -->
+   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Loads Lobster Two and Overpass fonts from Google -->
+   <link rel="stylesheet" href="style.css"> <!-- Links to the CSS stylesheet -->
+   <title>Task Tracker</title> <!-- Sets page title to "Task Tracker" -->
+</head> <!-- Closes head section -->
+<body> <!-- Opens body section -->
+   <div class="container"> <!-- Creates main container div -->
+       <img src="https://images.unsplash.com/photo-1613110751557-6f1277687218?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Task Tracker Header" class="header-image"> <!-- Adds header image from Unsplash -->
+       <h1>Task Tracker</h1> <!-- Creates main heading "Task Tracker" -->
+       <form id="taskForm"> <!-- Opens form for adding tasks -->
+           <!-- Task form inputs go here -->
+            <!-- I added placeholders to alert to users what action they need to take -->
+           <form> <!-- Opens nested form (this is redundant) -->
+            <label for="taskName">Task name:</label> <!-- Creates label for task name input -->
+            <input type="text" id="taskName" name="taskName" placeholder="Enter your task name here..."><br><br> <!-- Creates text input for task name with placeholder -->
+            <label for="taskDescription">Description:</label> <!-- Creates label for description -->
+            <textarea id="taskDescription" name="taskDescription" placeholder="Describe what needs to be done..."></textarea><br><br> <!-- Creates textarea for task description with placeholder -->
+           <label for="taskDeadline">Task deadline:</label> <!-- Creates label for deadline -->
+            <input type="date" id="taskDeadline" name="taskDeadline"><br><br> <!-- Creates date input for task deadline -->
+           <button type="submit">Add Task</button> <!-- Creates submit button -->
+           </form> <!-- Closes nested form -->
+       </form> <!-- Closes main form -->
+       <table id="taskTable"> <!-- Creates table for displaying tasks -->
+           <!-- Task table content here -->
+       </table> <!-- Closes table -->
+   </div> <!-- Closes container div -->
+   <script src="script.js"></script> <!-- Links to JavaScript file -->
+</body> <!-- Closes body -->
+</html> <!-- Closes HTML document -->

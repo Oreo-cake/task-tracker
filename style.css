@@ -1,0 +1,77 @@
+body { /* Targets body element */
+    font-family: 'Overpass', sans-serif; /* Sets font to Overpass */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    background-color: #fc98b6; /* Sets background to pink */
+ }
+
+.header-image { /* Targets header image */
+    width: 100%; /* Sets width to 100% */
+    max-width: 600px; /* Limits max width to 600px */
+    height: 200px; /* Sets height to 200px */
+    object-fit: cover; /* Makes image cover container */
+    border-radius: 8px; /* Rounds corners */
+    margin-bottom: 20px; /* Adds bottom margin */
+    display: block; /* Makes it a block element */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto; /* Centers horizontally (alternative method) */
+}
+
+h1 { /* Targets h1 element */
+    font-family: 'Lobster Two', cursive; /* Sets font to Lobster Two */
+    font-size: 3rem; /* Sets font size to 3rem */
+    color: #ff4c90; /* Sets color to pink */
+    margin-bottom: 30px; /* Adds bottom margin */
+    text-align: center; /* Centers text */
+}
+ .container { /* Targets container class */
+    max-width: 800px; /* Sets max width to 800px */
+    margin: 50px auto; /* Centers container with auto margins */
+    padding: 20px; /* Adds padding inside container */
+    background-color: #fff; /* Sets background to white */
+    border-radius: 8px; /* Rounds corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds shadow effect */
+ }
+form { /* Targets form element */
+    margin-bottom: 20px; /* Adds bottom margin */
+    text-align: center; /* Centers form content */
+}
+
+form label { /* Targets labels inside forms */
+    display: block; /* Makes labels display as blocks */
+    margin-bottom: 5px; /* Adds bottom margin */
+    font-weight: 500; /* Makes text semi-bold */
+}
+
+/* Ensure all form inputs use consistent font family and size */
+/* Different input types (text, date, textarea) have different browser defaults */
+form input, form textarea { /* Targets inputs and textareas in forms */
+    margin-bottom: 15px; /* Adds bottom margin */
+    padding: 8px; /* Adds padding inside inputs */
+    border: 2px solid #ddd; /* Sets border style */
+    border-radius: 4px; /* Rounds input corners */
+    width: 300px; /* Sets width to 300px */
+    max-width: 100%; /* Limits max width to 100% */
+    font-family: 'Overpass', sans-serif; /* Sets font to Overpass */
+    font-size: 14px; /* Sets font size to 14px */
+}
+
+form button { /* Targets buttons in forms */
+    background-color: #ff4c90; /* Sets background to pink */
+    color: white; /* Sets text color to white */
+    padding: 10px 20px; /* Adds padding inside button */
+    border: none; /* Removes border */
+    border-radius: 4px; /* Rounds button corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 16px; /* Sets font size to 16px */
+    font-weight: 500; /* Makes text semi-bold */
+}
+
+form button:hover { /* Targets button on hover */
+    background-color: #e03d7a; /* Changes background to darker pink */
+}
+
+/* Style for task name column to make it bold */
+table td:first-child { /* Targets first cell in each table row */
+    font-weight: bold; /* Makes text bold */
+}
