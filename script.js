@@ -21,8 +21,6 @@
     const taskDeadline = document.getElementById('taskDeadline').value; // Gets task deadline from date input
     // TODO: Validate input fields
     if (!taskName|| !taskDeadline) { // Checks if task name and deadline are filled
-    https://md2pdf.netlify.app // Random URL (appears to be a mistake)
-    8/9 // Number 8/9 (appears to be a mistake)
            alert('Task name and deadline are required!'); // Shows alert if required fields are empty
            return; // Stops function if validation fails
        }
@@ -32,19 +30,39 @@
        render(); // Calls render function to update display
     }
     // Function to render tasks in the table
-    function render() { // Defines function to display tasks
-       // TODO: Use array methods to create a new table row of data for each item in the arr
-         // I added a colon after task.name to clearly separate task name from task desc
+    function render() { // Defines function to display tasks without using template strings
+       taskTable.innerHTML = ''; // Clear the table content
+       tasks.forEach(task => {
+           const row = document.createElement('tr');
 
-       taskTable.innerHTML = tasks.map(task => ` // Creates HTML for each task using map
-           <tr> // Creates table row
-               <td>${task.name}:</td> // Creates cell with task name and colon
-               <td>${task.description}</td> // Creates cell with task description
-               <td>${task.deadline}</td> // Creates cell with task deadline
-               <td><button onclick="markTaskComplete(this)">Complete</button></td> // Creates cell with Complete button
-               <td><button onclick="removeTask(this)">Remove</button></td> // Creates cell with Remove button
-           </tr> // Closes table row
-       `).join(''); // Joins all HTML strings together
+           const nameCell = document.createElement('td');
+           nameCell.textContent = `${task.name}:`;
+           row.appendChild(nameCell);
+
+           const descCell = document.createElement('td');
+           descCell.textContent = task.description;
+           row.appendChild(descCell);
+
+           const deadlineCell = document.createElement('td');
+           deadlineCell.textContent = task.deadline;
+           row.appendChild(deadlineCell);
+
+           const completeCell = document.createElement('td');
+           const completeBtn = document.createElement('button');
+           completeBtn.textContent = 'Complete';
+           completeBtn.setAttribute('onclick', 'markTaskComplete(this)');
+           completeCell.appendChild(completeBtn);
+           row.appendChild(completeCell);
+
+           const removeCell = document.createElement('td');
+           const removeBtn = document.createElement('button');
+           removeBtn.textContent = 'Remove';
+           removeBtn.setAttribute('onclick', 'removeTask(this)');
+           removeCell.appendChild(removeBtn);
+           row.appendChild(removeCell);
+
+           taskTable.appendChild(row);
+       });
     }
     // Function to mark a task as complete
     function markTaskComplete(button) { // Defines function to mark task complete
